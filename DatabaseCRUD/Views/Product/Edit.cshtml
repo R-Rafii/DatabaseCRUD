@@ -1,0 +1,14 @@
+﻿@using DatabaseCRUD.Models;
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+<form method="post">
+    Name: <input type="text" name="Name" placeholder="Name" class="form-control" value="@Model.Name"/>
+    Price: <input type="text" name="Price" placeholder="Price" class="form-control" value="@Model.Price"/>
+    Quantity: <input type="text" name="Qty" placeholder="Quantity" class="form-control" value="@Model.Qty"/>
+    <input type="submit" value="Update" class="btn btn-success" />
+</form>
+

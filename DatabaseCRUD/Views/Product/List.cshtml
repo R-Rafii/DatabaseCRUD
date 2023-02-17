@@ -1,0 +1,32 @@
+﻿@using DatabaseCRUD.Models;
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<table border="1" class="table">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Edit / Delete</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Qty</td>
+            <td><a href="/Product/Edit/@item.Id">Edit </a> <a href="/Product/Delete/@item.Id"> Delete</a> </td>
+        </tr>
+    }
+
+
+</table>
+<a class="btn btn-primary" href="/Product/Index" role="button">Add Product</a>
+
